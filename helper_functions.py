@@ -34,10 +34,10 @@ class SaveModelCheckpoint:
                     'train_loss': train_loss,
                     'val_loss': val_loss,
                     }, self.path)
-            best_val_loss=val_loss
+            bestt_val_loss=val_loss
 
             print(f'{bcolors.OKGREEN}{bcolors.BOLD}Model saved at epoch: {it+1}, val_loss improved from: {best_val_loss:.4f} to: {val_loss:.4f}{bcolors.ENDC}')
-        return best_val_loss
+        return bestt_val_loss
 
 
 # In[5]:
