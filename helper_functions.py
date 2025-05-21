@@ -26,7 +26,7 @@ class SaveModelCheckpoint:
     def __init__(self, path='model_checkpoint.pt'):
         self.path = path
     def __call__(self,val_loss, best_val_loss, train_loss, it, model, optimizer):
-        bestt_val_loss=float("inf")
+        bestt_val_loss=best_val_loss
         if (val_loss<best_val_loss):
             torch.save({
                     'epoch': it,
